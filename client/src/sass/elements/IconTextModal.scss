@@ -1,0 +1,30 @@
+
+.icon-text-modal {
+	.modal-header {
+		button.close {
+			display: none;
+		}
+	}
+
+	.modal-body {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin: 0 1.5rem;
+
+		.icon {
+			@include flex-center(column);
+			margin: 0 2rem 0 1rem;
+			img {
+				width: 75px;
+				height: 75px;
+			}
+		}
+	}
+
+	.modal-footer {
+		.btn-secondary {
+			display: none;
+		}
+	}
+}

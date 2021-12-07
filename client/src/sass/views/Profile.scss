@@ -1,0 +1,82 @@
+
+#profile {
+	height: 100%;
+	overflow: hidden;
+
+	.left {
+		@include flex-center(column);
+		justify-content: flex-start;
+		padding: 1.5rem 0.5rem;
+		border-right: solid 1px $accent-color;
+		@media (max-width: $grid-md) { border-right: none; }
+
+		.profile {
+			padding: 0 0 1rem 0;
+			border-bottom: solid 1px $border-color;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.password {
+			padding: 1rem 0;
+			border-bottom: solid 1px $border-color;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+
+	.right {
+		@include flex-center(column);
+		padding: 0 1.5rem;
+
+		.big-avatar {
+			width: 250px;
+			height: 250px;
+			border-radius: 50%;
+			border: solid 1px $accent-color;
+			margin-bottom: 5rem;
+			@media (max-width: $grid-md) { margin-bottom: 2.5rem; }
+		}
+
+		.avatar {
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+		}
+
+		.sex-select {
+			text-align: center;
+			.button {
+				margin: 0 10px 5px 0;
+			}
+		}
+
+		.gallery {
+			width: 100%;
+			margin: 0.75rem 0 2rem 0;
+			padding: 0.75rem 0;
+			border-top: solid 1px $border-color;
+			border-bottom: solid 1px $border-color;
+
+			.avatars {
+				display: flex;
+				height: 50px;
+				overflow: hidden;
+
+				img {
+					min-width: 50px;
+					min-height: 50px;
+					margin: 0 0.25rem;
+					border: solid 1px transparent;
+					border-radius: 0;
+					transition: 0.25s all;
+
+					&:hover {
+						border: solid 1px $white;
+						transition: 0.25s all;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+
+.buy-game-modal {
+	.modal-header {
+		button.close {
+			display: none;
+		}
+	}
+
+	.modal-body {
+		@include flex-center(column);
+		margin: 0 1.5rem;
+
+		.body {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+
+			.icon {
+				@include flex-center(column);
+				margin: 0 1rem;
+				img {
+					width: 75px;
+					height: 75px;
+				}
+			}
+
+			.text {
+				margin: 1rem;
+				h5 {
+					margin-top: 1.5rem;
+					margin-bottom: 0.5rem;
+					color: $accent-color;
+				}
+			}
+		}
+
+		.buttons {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			border-top: solid 1px $border-color;
+			padding: 1rem 0;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+
+#register-form {
+	background: url('../images/material/3.jpg') center no-repeat;
+	background-size: cover;
+	@include black-box-shadow();
+	width: auto;
+	height: 606px;
+
+	.right {
+		img	{
+			width: auto;
+			height: 606px;
+		}
+	}
+
+	.left {
+		@include flex-center(column);
+		min-width: 470px;
+
+		.form-heading {
+			color: $accent-color;
+			padding: 0 2.5rem 0.5rem 2.5rem;
+			border-bottom: solid 1px $border-color;
+			margin:  3rem 0 1.5rem 0;
+			@media (max-width: $grid-lg) { padding: 0 1.5rem 0.5rem 1.5rem; }
+			@media (max-width: $grid-sm) { padding: 0 1rem 0.5rem 1rem; }
+		}
+
+		.form-subheading {
+			margin-bottom: 2.5rem;
+		}
+
+		.input-group {
+			&-prepend {
+				.input-group-text {
+					background: $inputs-background;
+				}
+			}
+			input, select {
+				background: $inputs-background;
+				&:focus {
+					background: $inputs-background;
+				}
+			}
+		}
+
+		.form-check {
+			@include flex-center(row);
+			&-label {
+				width: unset;
+			}
+		}
+
+		.register-btn {
+			position: relative;
+			margin-bottom: 1.5rem;
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 25px;
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 13px;
+				left: 45px;
+				background: url('../icons/register.svg');
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		.form-link {
+			cursor: pointer;
+			&:hover { text-decoration: underline; }
+			*:last-child { margin-bottom: 0; }
+		}
+	}
+}

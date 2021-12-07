@@ -1,0 +1,66 @@
+
+#login-form {
+	background: url('../images/material/3.jpg') center no-repeat;
+	background-size: cover;
+	@include black-box-shadow();
+	padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+	width: 350px;
+	height: auto;
+
+	.content {
+		@include flex-center(column);
+
+		.login-image-bg {
+			@include flex-center(row);
+			background: url("../images/login-page/login-image-bg.png") top left no-repeat;
+			width: 200px;
+			height: 200px;
+			margin: 0 3rem 2rem 3rem;
+
+			.login-image {
+				@include flex-center(row);
+				img {
+					width: 150px;
+					height: 150px;
+				}
+			}
+		}
+
+		.form-heading {
+			color: $accent-color;
+			border-bottom: solid 1px $border-color;
+			padding: 0 2.5rem 0.5rem 2.5rem;
+		}
+
+		input {
+			background: $inputs-background;
+		}
+
+		.login-button {
+			position: relative;
+			margin-bottom: 1.5rem;
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 25px;
+			}
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 10px;
+				left: 45px;
+				background: url('../icons/fingerprint.svg');
+				width: 25px;
+				height: 25px;
+			}
+		}
+
+		.form-link {
+			cursor: pointer;
+			margin-bottom: 0.25rem;
+			&:hover { text-decoration: underline; }
+			*:last-child { margin-bottom: 0; }
+		}
+	}
+}

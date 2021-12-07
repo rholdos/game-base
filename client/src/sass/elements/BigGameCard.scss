@@ -1,0 +1,142 @@
+
+.big-game-card {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  background: transparent top right no-repeat;
+  background-size: cover;
+  @include box-shadow-component($cards-shadow-color);
+  color: $gray-200;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 6px;
+  display: none;
+
+  &-cover-after {
+    background: linear-gradient(90deg, $black 55%, transparent 100%);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: 0.5s all;
+  }
+
+  .card-content {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    margin: 1rem;
+    color: inherit;
+    font-weight: 300;
+    z-index: 3;
+    transition: 0.5s all;
+
+    .card-heading {
+
+      .small-cover {
+        width: 90px;
+        height: 120px;
+        margin-left: 1rem;
+        background: rgba(black, 0.25) center no-repeat;
+        background-size: contain;
+      }
+
+      .text {
+        margin-left: 15px;
+
+        .name {
+          max-height: 75px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+          h3 {
+            font-size: $font-size-xxl;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .release {
+          font-size: $font-size-md;
+          font-weight: 300;
+          margin-bottom: 0.5rem;
+        }
+
+        .genre {
+          font-size: $font-size-sm;
+          font-weight: 300;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card-body {
+      margin: 1.25rem 0;
+      padding: 0;
+      line-height: 1.25rem;
+      font-size: $font-size-sm;
+      transition: 0.25s all;
+    }
+
+    .card-icons {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      a {
+        width: 75px;
+        text-decoration: none;
+        color: inherit;
+        transition: 0.3s all;
+
+        &:hover {
+          background-color: $icon-hover-background;
+          transition: 0.3s all;
+        }
+
+        div {
+          img {
+            display: block;
+            width: 75px;
+            height: 35px;
+            margin: 0.25rem 0;
+          }
+
+          span {
+            display: block;
+            width: 75px;
+            text-align: center;
+            font-size: $font-size-sm;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: $grid-sm) {
+  .big-game-card {
+    .card-content {
+      .card-heading {
+        img {
+          display: none;
+        }
+      }
+    }
+    .card-icons {
+      margin: 0 0.5rem;
+      a {
+        transform: scale(0.9);
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+
+// Base
+@import 'base/Variables.scss';
+@import 'base/Mixins.scss';
+@import 'base/Page.scss';
+@import 'base/Typography.scss';
+@import 'base/Inputs.scss';
+@import 'base/BTabs.scss';
+@import 'base/BModals.scss';
+@import 'base/Animations.scss';
+@import 'base/Transitions.scss';
+
+// Pages
+@import 'pages/LoadingPage.scss';
+@import 'pages/LoginPage.scss';
+@import 'pages/MainPage.scss';
+
+// Layout
+@import 'layout/SideBar.scss';
+@import 'layout/Navigation.scss';
+@import 'layout/MainBar.scss';
+
+// Views
+@import 'views/Dashboard.scss';
+@import 'views/Profile.scss';
+@import 'views/Clan.scss';
+@import 'views/Releases.scss';
+@import 'views/Shop.scss';
+@import 'views/Credits.scss';
+
+// Elements
+@import 'elements/LoginForm.scss';
+@import 'elements/RegisterForm.scss';
+@import 'elements/Loader.scss';
+@import 'elements/GameList.scss';
+@import 'elements/WishList.scss';
+@import 'elements/GamePlayCard.scss';
+@import 'elements/ClanCard.scss';
+@import 'elements/PlayerCard.scss';
+@import 'elements/SmallGameCard.scss';
+@import 'elements/BigGameCard.scss';
+@import 'elements/Timeline.scss';
+@import 'elements/IconTextModal.scss';
+@import 'elements/CreateClanModal.scss';
+@import 'elements/ChangeClanIconModal.scss';
+@import 'elements/InviteClanMemberModal.scss';
+@import 'elements/BuyGameModal.scss';

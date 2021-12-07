@@ -1,0 +1,37 @@
+
+.loader-small {
+  .loader-icon {
+    @include flex-center(row);
+    margin-bottom: 1rem;
+  }
+
+  .loader-text {
+    font-family: $font-family-primary;
+    font-size: $font-size-md;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: $text-color;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+}
+
+.loader-big {
+  .loader-icon {
+    @include flex-center(row);
+    margin-bottom: 1.5rem;
+  }
+
+  .loader-text {
+    font-family: $font-family-primary;
+    font-size: $font-size-xl;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: $text-color;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0 }
+  50% { opacity: 0.65 }
+}

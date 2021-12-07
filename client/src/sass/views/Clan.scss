@@ -1,0 +1,177 @@
+
+#clan {
+	height: 100%;
+	overflow: hidden;
+
+	.no-clan {
+		height: 100%;
+		@include flex-center(column);
+		text-align: center;
+
+		&-icon {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	.clan-invitation {
+		height: 100%;
+		@include flex-center(column);
+		text-align: center;
+
+		&-icon {
+			width: 150px;
+			height: 150px;
+		}
+
+		&-text {
+			border-bottom: solid 1px $border-color;
+			padding: 0 1.5rem 0.75rem 1.5rem;
+		}
+
+		&-info {
+			@include flex-center(row);
+			padding: 1rem 0;
+			.icon {
+				@include flex-center(column);
+				border-right: solid 1px $border-color;
+
+				img {
+					width: 125px;
+					height: 125px;
+					border-radius: 50%;
+					border: solid 1px $accent-color;
+					margin: 1rem 1.5rem;
+				}
+			}
+			.info {
+				margin: 1rem;
+				.name {
+					color: $accent-color;
+				}
+			}
+		}
+
+		&-buttons {
+			@include flex-center(row);
+			margin-top: 1rem;
+		}
+	}
+
+	.clan {
+		height: 100%;
+
+		.clan-info {
+			@include flex-center(row);
+			justify-content: center;
+			@media (max-width: $grid-md) {
+				display: block;
+			}
+
+			&-section {
+				@include flex-center(column);
+				width: 275px;
+				text-align: center;
+				padding: 1rem;
+				@media (max-width: $grid-md) {
+					width: unset;
+				}
+
+				.clan,
+				.leader {
+					margin: 0;
+					color: $accent-color;
+				}
+
+				.name {
+					border-top: solid 1px $border-color;
+					border-bottom: solid 1px $border-color;
+					padding: 0.5rem 1.5rem;
+					margin: 0.25rem 0;
+				}
+
+				.icon {
+					width: 150px;
+					height: 150px;
+					border-radius: 50%;
+					border: solid 2px $white;
+					margin: 0 1.5rem;
+					&.clickable {
+						cursor: pointer;
+					}
+				}
+
+				.members,
+				.games {
+					margin-bottom: 0.75rem;
+				}
+
+				.rank {
+					margin-bottom: 0;
+				}
+
+				.button {
+					margin-top: 0.75rem;
+				}
+			}
+		}
+
+		.clan-members {
+			@include flex-center(row);
+			margin-top: 3rem;
+
+			@media (max-width: $grid-xxl) {
+				transform: scale(0.8);
+				margin-top: 0;
+			}
+
+			@media (max-width: $grid-xl) {
+				transform: scale(0.6);
+				margin-top: -2.5rem;
+			}
+
+			@media (max-width: $grid-md) {
+				display: block;
+				transform: scale(1);
+				margin: 0;
+			}
+
+			&-member {
+				@media (max-width: $grid-md) {
+					transform: scale(1) !important;
+					margin: 1rem auto !important;
+					z-index:0 !important;
+				}
+
+				&-4 {
+					transform: scale(0.75);
+					margin-top: -3rem;
+					margin-right: -4.35rem;
+					z-index: 1;
+				}
+				&-2 {
+					transform: scale(0.875);
+					margin-top: -2.5rem;
+					margin-right: -2rem;
+					z-index: 2;
+				}
+				&-leader {
+					transform: scale(1.00);
+					z-index: 3;
+				}
+				&-3 {
+					transform: scale(0.875);
+					margin-top: -2.5rem;
+					margin-left: -2rem;
+					z-index: 2;
+				}
+				&-5 {
+					transform: scale(0.75);
+					margin-top: -3rem;
+					margin-left: -4.35rem;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

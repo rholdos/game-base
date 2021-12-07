@@ -1,0 +1,68 @@
+
+body {
+	background: $loading-page-background;
+  box-sizing: border-box;
+  font-family: $font-family-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color !important;
+  font-size: 14px !important;
+  margin: 0;
+}
+
+.page-center-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+hr { border-top: solid 1px $border-color; }
+
+.button             { @include button($accent-color); }
+.button-secondary   { @include button($secondary-color); }
+.button-blue        { @include button($blue); }
+.button-green       { @include button($green); }
+.button-red         { @include button($red); }
+.button-orange      { @include button($orange); }
+
+.button-small {
+  padding: 2px 30px;
+  border-radius: 25px;
+  text-transform: none;
+}
+
+.button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.invalid-input {
+	border: solid 1px $red !important;
+	color: $red !important;
+}
+
+.valid-input {
+	border: solid 1px $green !important;
+	color: $green !important;
+}
+
+.alert {
+	margin: 1rem;
+	text-align: center;
+}
+
+.grab {
+	cursor: grab;
+}
+
+.grabbing {
+	cursor: grabbing;
+}

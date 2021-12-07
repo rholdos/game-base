@@ -1,0 +1,54 @@
+
+.change-clan-icon-modal {
+	.modal-body {
+		.left {
+			border-right: solid 1px $border-color;
+			@media (max-width: $grid-md) {
+				border-right: none;
+				border-bottom: solid 1px $border-color;
+			}
+
+			.icons-gallery {
+				margin-bottom: 1rem;
+
+				img {
+					width: 50px;
+					height: 50px;
+					margin: 10px 20px;
+					filter: brightness(75%);
+					cursor: pointer;
+					border-radius: 50%;
+					transition: all 0.25s;
+
+					&:hover {
+						filter: brightness(100%);
+						transform: scale(1.45);
+					}
+				}
+			}
+		}
+
+		.right {
+			@include flex-center(column);
+
+			.clan-label {
+				margin: 1.5rem 0 0 0;
+			}
+
+			.clan-name {
+				width: 100%;
+				margin-bottom: 1.75rem;
+				min-height: 48px;
+				height: auto;
+				color: $accent-color;
+			}
+
+			.big-clan-icon {
+				width: 175px;
+				height: 175px;
+				border-radius: 50%;
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+}

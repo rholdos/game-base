@@ -1,0 +1,67 @@
+
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin black-box-shadow() {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+}
+
+@mixin white-box-shadow() {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+}
+
+@mixin box-shadow-under($color) {
+  box-shadow: 0 10px 30px -10px rgba($color, 0.35),
+              0 5px  20px -5px  rgba($color, 0.25),
+              0 10px 30px -20px rgba($black, 0.15);
+}
+
+@mixin box-shadow-component($color) {
+  box-shadow: 0 2px 10px 0 $color;
+}
+
+@mixin bg-gradient($color) {
+  background: linear-gradient(60deg, darken($color, 10%) 15%, $color 85%);
+}
+
+@mixin bg-gradient-strong($color) {
+  background: linear-gradient(60deg, $color 15%, darken($color, 25%) 85%);
+}
+
+@mixin button-reset() {
+	background: none;
+	border: none;
+	color: unset;
+	outline: none !important;
+	text-align: unset;
+	padding: 0;
+}
+
+@mixin button($bg-color) {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: $font-size-md;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s;
+  color: $black;
+  @include bg-gradient($bg-color);
+  box-shadow: 0 5px 10px rgba($bg-color, 0.25);
+	outline: none !important;
+
+  &:hover {
+    color: $white;
+    box-shadow: 0 5px 25px rgba($bg-color, 0.25);
+    transform: scale(1.1);
+  }
+}

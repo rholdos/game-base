@@ -1,0 +1,130 @@
+
+#side-bar {
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	overflow: hidden;
+	border-right: solid 1px $border-color;
+	@media (max-width: $grid-lg) { width: 75px; }
+
+	.logo {
+		height: 7.5%;
+		padding: 1rem 0;
+		margin: 0 1rem;
+		@include flex-center(row);
+		color: $accent-color;
+		border-bottom: solid 1px $border-color;
+
+		img {
+			width: 40px;
+			height: 40px;
+		}
+
+		span {
+			font-size: $font-size-xl;
+			font-weight: 400;
+			margin-left: 0.5rem;
+			@media (max-width: $grid-lg) { display: none; }
+		}
+	}
+
+	.menu {
+		height: 85%;
+		padding: 1rem 0;
+		@media (max-width: $grid-lg) { height: 72.5%; }
+
+		.tab {
+			@include flex-center(row);
+			justify-content: flex-start;
+			margin-bottom: 0.5rem;
+			padding: 0 1rem;
+			font-weight: 300;
+			height: 60px;
+			font-size: $font-size-sm;
+			color: $text-color;
+			border-left: solid 5px transparent;
+			transition: 0.25s all;
+
+			img {
+				display: inline-block;
+				margin-left: 1rem;
+				width: 30px;
+				height: 30px;
+				opacity: 0.85;
+				@media (max-width: $grid-lg) { margin-left: 0; }
+			}
+
+			span {
+				margin-left: 1rem;
+				display: inline-block;
+				line-height: 50px;
+				@media (max-width: $grid-lg) { display: none; }
+			}
+
+			&:hover {
+				cursor: pointer;
+				background: $black-transparent-light;
+				transition: 0.25s all;
+			}
+
+			&.active {
+				border-left: solid 5px $accent-color;
+				color: $accent-color;
+				font-weight: 500;
+				transition: 0.25s all;
+				@media (min-width: $grid-lg) {
+					padding-left: 2.5rem;
+				}
+			}
+		}
+	}
+
+	.status {
+		@include flex-center(row);
+		height: 7.5%;
+		padding: 1rem 0;
+		margin: 0 1rem;
+		border-top: solid 1px $border-color;
+		color: $text-color;
+		font-size: $font-size-sm;
+		@media (max-width: $grid-lg) {
+			height: 20%;
+			@include flex-center(column);
+		}
+
+
+		.date {
+			width: 100%;
+			@include flex-center(row);
+			justify-content: flex-start;
+			margin-left: 1.5rem;
+			@media (max-width: $grid-lg) {
+				width: 75%;
+				margin-left: 0;
+				text-align: center;
+				padding-bottom: 0.5rem;
+				border-bottom: solid 1px $accent-color;
+			}
+		}
+
+		.time {
+			width: 100%;
+			@include flex-center(row);
+			justify-content: flex-start;
+			margin-left: 1.5rem;
+			@media (max-width: $grid-lg) {
+				width: 75%;
+				margin-left: 0;
+				text-align: center;
+				padding-top: 0.5rem;
+			}
+		}
+
+		img {
+			width: 20px;
+			height: 20px;
+			margin-right: 0.75rem;
+			@media (max-width: $grid-lg) { display: none; }
+		}
+	}
+}

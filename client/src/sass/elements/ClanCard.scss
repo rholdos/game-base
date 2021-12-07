@@ -1,0 +1,39 @@
+
+.clan-card {
+	$selector: #{&};
+	background: url('../images/material/1.jpg') no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 25vh;
+	padding: 1rem;
+	margin: 1.5rem 0.5rem 0.5rem 0.5rem;
+	@include box-shadow-component($cards-shadow-color);
+
+	&-icon {
+		position: absolute;
+		left: 1.5rem;
+		top: -1rem;
+		width: 75px;
+		height: 75px;
+		padding: 1.25rem;
+		@include bg-gradient($red);
+		@include box-shadow-under($red);
+	}
+
+	&-text {
+		text-align: right;
+		padding: 0 0.5rem 1rem 0.5rem;
+		border-bottom: solid 1px $border-color;
+		*:last-child { margin-bottom: 0; }
+	}
+
+	&-footing {
+		padding: 1rem 0.5rem;
+		color: $red;
+		*:last-child { margin-bottom: 0; }
+	}
+
+	&-button {
+		text-align: right;
+	}
+}

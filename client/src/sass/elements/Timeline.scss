@@ -1,0 +1,147 @@
+
+.timeline {
+	color: $text-color;
+	font-weight: 300;
+
+	&-title {
+		text-align: center;
+		padding: 0.5rem 0;
+		margin: 1.5rem;
+		font-size: $font-size-lg;
+		border-bottom: solid 1px $border-color;
+		color: $cards-heading-color;
+		font-weight: 500;
+	}
+
+	&-items {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0 1rem;
+
+		.item {
+			.row {
+				position: relative;
+				height: 250px;
+				overflow: hidden;
+
+				.left-panel {
+					padding: 0 40px 0 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: right;
+
+					.name {
+						margin-bottom: 0;
+					}
+				}
+
+				.right-panel {
+					@include flex-center(column);
+					padding: 0 15px 0 40px;
+
+					.company {
+						margin-bottom: 0.25rem;
+					}
+
+					.genres {
+						margin-bottom: 20px;
+					}
+
+					.summary {
+						max-height: 126px;
+						margin-bottom: 0;
+						overflow: hidden;
+						text-align: center;
+					}
+				}
+
+				.timeline-icon {
+					position: absolute;
+					width: 50px;
+					height: 50px;
+					top: 50%;
+					left: calc(100% / 12 * 5);
+					margin-top: -25px;
+					margin-left: -25px;
+					padding: 0.5rem;
+					border-radius: 50%;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
+
+// Color variants
+.timeline {
+	&.blue {
+		.timeline-items {
+			.item {
+				.left-panel {
+					border-right: solid 1px lighten($blue, 25%);
+				}
+				.right-panel {
+					border-left: solid 1px lighten($blue, 25%);
+				}
+				.timeline-icon {
+					@include bg-gradient($blue);
+					@include box-shadow-under($blue);
+				}
+			}
+		}
+	}
+
+	&.red {
+		.timeline-items {
+			.item {
+				.left-panel {
+					border-right: solid 1px lighten($red, 25%);
+				}
+				.right-panel {
+					border-left: solid 1px lighten($red, 25%);
+				}
+				.timeline-icon {
+					@include bg-gradient($red);
+					@include box-shadow-under($red);
+				}
+			}
+		}
+	}
+
+	&.green {
+		.timeline-items {
+			.item {
+				.left-panel {
+					border-right: solid 1px lighten($green, 25%);
+				}
+				.right-panel {
+					border-left: solid 1px lighten($green, 25%);
+				}
+				.timeline-icon {
+					@include bg-gradient($green);
+					@include box-shadow-under($green);
+				}
+			}
+		}
+	}
+
+	&.orange {
+		.timeline-items {
+			.item {
+				.left-panel {
+					border-right: solid 1px lighten($orange, 25%);
+				}
+				.right-panel {
+					border-left: solid 1px lighten($orange, 25%);
+				}
+				.timeline-icon {
+					@include bg-gradient($orange);
+					@include box-shadow-under($orange);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+
+.player-card {
+	position: relative;
+	@include flex-center(column);
+	max-width: 325px;
+	background: $player-card-background center no-repeat;
+	padding: 2.5rem;
+
+	&:after {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: solid 1px $border-color;
+		transition: all 0.3s;
+		pointer-events: none;
+	}
+
+	&:hover {
+		&:after {
+			border: solid 1px $white;
+			transition: all 0.3s;
+		}
+	}
+
+	&-image {
+		@include flex-center(column);
+		img {
+			width: 200px;
+			height: 200px;
+			margin-bottom: 2rem;
+			border-radius: 50%;
+			border: solid 1px $accent-color;
+		}
+	}
+
+	&-text {
+		width: 100%;
+		text-align: center;
+		h6 { margin-bottom: 0; }
+		.name {
+			color: $accent-color;
+			margin-bottom: 1rem;
+		}
+		.status {
+			text-transform: uppercase;
+			position: relative;
+			top: 0.2rem;
+			font-size: $font-size-md;
+			color: $accent-color;
+		}
+		.role {
+			padding: 0.75rem 0;
+			border-top: solid 1px $border-color;
+			border-bottom: solid 1px $border-color;
+		}
+		.date {
+			padding: 0.75rem 0;
+		}
+		.invite-button {
+			margin-top: 1rem;
+			padding: 15px 20px;
+			font-size: $font-size-md;
+		}
+	}
+}

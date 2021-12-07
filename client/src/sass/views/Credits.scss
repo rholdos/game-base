@@ -1,0 +1,115 @@
+
+#credits {
+	height: 100%;
+	overflow: hidden;
+	padding: 1.5rem 0;
+	font-family: $font-family-thin;
+	letter-spacing: 2px;
+
+	.left {
+		@include flex-center(column);
+		padding: 1.5rem 0;
+		border-right: solid 1px $accent-color;
+
+		.title {
+			font-size: 3rem;
+			margin: 0;
+			position: relative;
+		}
+
+		.project {
+			margin: 0;
+		}
+
+		.copyright {
+			margin-bottom: 1rem;
+		}
+
+		.line-row {
+			width: 75%;
+			height: 0;
+			margin: 2.25rem 0;
+
+			.line {
+				display: inline-block;
+				width: 40%;
+				height: 0;
+				border-bottom: solid 1px $accent-color;
+			}
+
+			.icon {
+				@include flex-center(row);
+				width: 20%;
+				height: 32px;
+				margin-top: -16px;
+				img {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+	}
+
+	.right {
+		@include flex-center(column);
+		overflow: hidden;
+		padding: 1.5rem 0;
+
+		.scroll-content {
+			text-align: center;
+			animation: scroll-up 17.5s linear infinite;
+
+			@media (min-width: $grid-md) {
+				padding-left: 1rem;
+			}
+
+			@keyframes scroll-up {
+				0%   { transform: translateY(75%); }
+				100% { transform: translateY(-75%); }
+			}
+
+			.subtitle {
+				color: $accent-color;
+				text-transform: uppercase;
+				margin-bottom: 1.5rem;
+			}
+
+			.technology {
+				margin-bottom: 3rem;
+
+				.logo {
+					margin-bottom: 0.5rem;
+					img {
+						width: auto;
+						height: 50px;
+						margin: 0.5rem 0;
+					}
+				}
+
+				.text {
+					@include flex-center(column);
+
+					* {
+						margin-bottom: 0;
+						&:first-child {
+							margin-bottom: 0.25rem;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: $grid-md) {
+		.left {
+			height: 25vh !important;
+			border-right: none;
+			border-bottom: solid 2px $accent-color;
+		}
+		.right {
+			height: 55vh !important;
+			margin: 2.5rem 0;
+		}
+	}
+}
