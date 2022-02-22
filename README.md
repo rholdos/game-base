@@ -13,3 +13,4 @@
 
 ### License
 - This project is [MIT](https://github.com/rholdos/game-base/LICENSE.md) licensed.
+- Not published, neither maintained.
