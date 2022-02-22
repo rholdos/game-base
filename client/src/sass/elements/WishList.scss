@@ -1,206 +1,293 @@
-
 .wish-list {
-	$selector: #{&};
-	position: relative;
-	height: 50vh;
-	background: $cards-background;
-	background-size: cover;
-	margin: 0.5rem 0;
-	cursor: default;
-	@include box-shadow-component($cards-shadow-color);
+  $selector: #{&};
+  position: relative;
+  height: 50vh;
+  background: $cards-background;
+  background-size: cover;
+  margin: 0.5rem 0;
+  cursor: default;
+  @include box-shadow-component($cards-shadow-color);
 
-	&-left {
-		position: relative;
-		@include flex-center(column);
-		height: 100%;
-		padding: 0 1.5rem;
+  &-left {
+    position: relative;
+    @include flex-center(column);
+    height: 100%;
+    padding: 0 1.5rem;
 
-		&-heading {
-			position: relative;
-			@include flex-center(column);
-			width: 100%;
-			height: 35%;
-			text-align: center;
-			h4 {
-				padding-top: 1.5rem;
-				margin-bottom: 0;
-			}
-			*:last-child { margin-bottom: 0; }
+    &-heading {
+      position: relative;
+      @include flex-center(column);
+      width: 100%;
+      height: 35%;
+      text-align: center;
+      h4 {
+        padding-top: 1.5rem;
+        margin-bottom: 0;
+      }
+      *:last-child {
+        margin-bottom: 0;
+      }
 
-			&-border {
-				position: absolute;
-				top: 0;
-				left: calc(50% - 1px);
-				display: block;
-				width: 2px;
-				height: 2rem;
-			}
-		}
+      &-border {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 1px);
+        display: block;
+        width: 2px;
+        height: 2rem;
+      }
+    }
 
-		&-body {
-			overflow-x: hidden;
-			overflow-y: auto;
-			width: 100%;
-			height: 70%;
-			*:last-child { margin-bottom: 0; }
+    &-body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 100%;
+      height: 70%;
+      *:last-child {
+        margin-bottom: 0;
+      }
 
-			&-list {
-				height: 220px;
-				overflow-x: hidden;
-				overflow-y: auto;
+      &-list {
+        height: 220px;
+        overflow-x: hidden;
+        overflow-y: auto;
 
-				.no-wishes {
-					@include flex-center(column);
-					height: 100%;
+        .no-wishes {
+          @include flex-center(column);
+          height: 100%;
 
-					img {
-						width: 100px;
-						height: 100px;
-						margin-bottom: 1rem;
-					}
-				}
+          img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+          }
+        }
 
-				&-item {
-					@include flex-center(row);
-					justify-content: flex-start;
-					padding: 0.5rem 1rem;
-					border-top: solid 1px $border-color;
-					border-bottom: solid 1px $border-color;
-					transition: all 0.3s ease-out;
-					overflow: hidden;
-					&:first-child { border-top: solid 2px $border-color; }
-					&:last-child { border-bottom: solid 2px $border-color; }
+        &-item {
+          @include flex-center(row);
+          justify-content: flex-start;
+          padding: 0.5rem 1rem;
+          border-top: solid 1px $border-color;
+          border-bottom: solid 1px $border-color;
+          transition: all 0.3s ease-out;
+          overflow: hidden;
+          &:first-child {
+            border-top: solid 2px $border-color;
+          }
+          &:last-child {
+            border-bottom: solid 2px $border-color;
+          }
 
-					&:hover {
-						.icons {
-							margin-left: 0;
-						}
-					}
+          &:hover {
+            .icons {
+              margin-left: 0;
+            }
+          }
 
-					&-text {
-						.title {
-							font-family: $font-family-thin;
-							font-size: $font-size-lg;
-							margin-bottom: 0.25rem;
-							transition: all 0.3s ease-out;
-						}
+          &-text {
+            .title {
+              font-family: $font-family-thin;
+              font-size: $font-size-lg;
+              margin-bottom: 0.25rem;
+              transition: all 0.3s ease-out;
+            }
 
-						.date {
-							font-family: $font-family-secondary;
-							font-size: $font-size-sm;
-							color: $text-color-darker;
-							transition: all 0.3s ease-out;
-						}
-					}
+            .date {
+              font-family: $font-family-secondary;
+              font-size: $font-size-sm;
+              color: $text-color-darker;
+              transition: all 0.3s ease-out;
+            }
+          }
 
-					&-icons {
-						margin-right: 30px;
-						@include flex-center(row);
-						margin-left: -95px;
-						transition: all 0.4s ease-out;
-						z-index: 1;
-						button {
-							@include button-reset();
-							img	{
-								width: 30px;
-								height: 30px;
-								cursor: pointer;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+          &-icons {
+            margin-right: 30px;
+            @include flex-center(row);
+            margin-left: -95px;
+            transition: all 0.4s ease-out;
+            z-index: 1;
+            button {
+              @include button-reset();
+              img {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
-	&-right {
-		//width: 45%;
-		@include flex-center(column);
-		img {
-			width: 125px;
-			height: 125px;
-			margin-bottom: 2rem;
-		}
-	}
+  &-right {
+    //width: 45%;
+    @include flex-center(column);
+    img {
+      width: 125px;
+      height: 125px;
+      margin-bottom: 2rem;
+    }
+  }
 
-	// Color variants
-	&.blue {
-		#{$selector}-left-heading h4 { color: $blue; }
-		#{$selector}-left-heading-border { @include bg-gradient($blue); }
-		#{$selector}-left-body-list-item {
-			&:hover {
-				border-top: solid 1px $blue;
-				border-bottom: solid 1px $blue;
-				&:first-child { border-top: solid 2px $blue; }
-				&:last-child { border-bottom: solid 2px $blue; }
-				#{$selector}-left-body-list-item-text { .title { color: $blue; } }
-				#{$selector}-left-body-list-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $blue; } }
-		}
-		#{$selector}-right-button {
-			@include bg-gradient($blue);
-			@include box-shadow-under($blue);
-		}
-	}
+  // Color variants
+  &.blue {
+    #{$selector}-left-heading h4 {
+      color: $blue;
+    }
+    #{$selector}-left-heading-border {
+      @include bg-gradient($blue);
+    }
+    #{$selector}-left-body-list-item {
+      &:hover {
+        border-top: solid 1px $blue;
+        border-bottom: solid 1px $blue;
+        &:first-child {
+          border-top: solid 2px $blue;
+        }
+        &:last-child {
+          border-bottom: solid 2px $blue;
+        }
+        #{$selector}-left-body-list-item-text {
+          .title {
+            color: $blue;
+          }
+        }
+        #{$selector}-left-body-list-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $blue;
+        }
+      }
+    }
+    #{$selector}-right-button {
+      @include bg-gradient($blue);
+      @include box-shadow-under($blue);
+    }
+  }
 
-	&.red {
-		#{$selector}-left-heading h4 { color: $red; }
-		#{$selector}-left-heading-border { @include bg-gradient($red); }
-		#{$selector}-left-body-list-item {
-			&:hover {
-				border-top: solid 1px $red;
-				border-bottom: solid 1px $red;
-				&:first-child { border-top: solid 2px $red; }
-				&:last-child { border-bottom: solid 2px $red; }
-				#{$selector}-left-body-list-item-text { .title { color: $red; } }
-				#{$selector}-left-body-list-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $red; } }
-		}
-		#{$selector}-right-button {
-			@include bg-gradient($red);
-			@include box-shadow-under($red);
-		}
-	}
+  &.red {
+    #{$selector}-left-heading h4 {
+      color: $red;
+    }
+    #{$selector}-left-heading-border {
+      @include bg-gradient($red);
+    }
+    #{$selector}-left-body-list-item {
+      &:hover {
+        border-top: solid 1px $red;
+        border-bottom: solid 1px $red;
+        &:first-child {
+          border-top: solid 2px $red;
+        }
+        &:last-child {
+          border-bottom: solid 2px $red;
+        }
+        #{$selector}-left-body-list-item-text {
+          .title {
+            color: $red;
+          }
+        }
+        #{$selector}-left-body-list-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $red;
+        }
+      }
+    }
+    #{$selector}-right-button {
+      @include bg-gradient($red);
+      @include box-shadow-under($red);
+    }
+  }
 
-	&.orange {
-		#{$selector}-left-heading h4 { color: $orange; }
-		#{$selector}-left-heading-border { @include bg-gradient($orange); }
-		#{$selector}-left-body-list-item {
-			&:hover {
-				border-top: solid 1px $orange;
-				border-bottom: solid 1px $orange;
-				&:first-child { border-top: solid 2px $orange; }
-				&:last-child { border-bottom: solid 2px $orange; }
-				#{$selector}-left-body-list-item-text { .title { color: $orange; } }
-				#{$selector}-left-body-list-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $orange; } }
-		}
-		#{$selector}-right-button {
-			@include bg-gradient($orange);
-			@include box-shadow-under($orange);
-		}
-	}
+  &.orange {
+    #{$selector}-left-heading h4 {
+      color: $orange;
+    }
+    #{$selector}-left-heading-border {
+      @include bg-gradient($orange);
+    }
+    #{$selector}-left-body-list-item {
+      &:hover {
+        border-top: solid 1px $orange;
+        border-bottom: solid 1px $orange;
+        &:first-child {
+          border-top: solid 2px $orange;
+        }
+        &:last-child {
+          border-bottom: solid 2px $orange;
+        }
+        #{$selector}-left-body-list-item-text {
+          .title {
+            color: $orange;
+          }
+        }
+        #{$selector}-left-body-list-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $orange;
+        }
+      }
+    }
+    #{$selector}-right-button {
+      @include bg-gradient($orange);
+      @include box-shadow-under($orange);
+    }
+  }
 
-	&.green {
-		#{$selector}-left-heading h4 { color: $green; }
-		#{$selector}-left-heading-border { @include bg-gradient($green); }
-		#{$selector}-left-body-list-item {
-			&:hover {
-				border-top: solid 1px $green;
-				border-bottom: solid 1px $green;
-				&:first-child { border-top: solid 2px $green; }
-				&:last-child { border-bottom: solid 2px $green; }
-				#{$selector}-left-body-list-item-text { .title { color: $green; } }
-				#{$selector}-left-body-list-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $green; } }
-		}
-		#{$selector}-right-button {
-			@include bg-gradient($green);
-			@include box-shadow-under($green);
-		}
-	}
+  &.green {
+    #{$selector}-left-heading h4 {
+      color: $green;
+    }
+    #{$selector}-left-heading-border {
+      @include bg-gradient($green);
+    }
+    #{$selector}-left-body-list-item {
+      &:hover {
+        border-top: solid 1px $green;
+        border-bottom: solid 1px $green;
+        &:first-child {
+          border-top: solid 2px $green;
+        }
+        &:last-child {
+          border-bottom: solid 2px $green;
+        }
+        #{$selector}-left-body-list-item-text {
+          .title {
+            color: $green;
+          }
+        }
+        #{$selector}-left-body-list-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $green;
+        }
+      }
+    }
+    #{$selector}-right-button {
+      @include bg-gradient($green);
+      @include box-shadow-under($green);
+    }
+  }
 }

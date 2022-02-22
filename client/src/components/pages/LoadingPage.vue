@@ -1,9 +1,6 @@
-
 <template>
 	<div id="loading-page">
-			<BigLoader
-				text="« Loading »"
-			></BigLoader>
+			<BigLoader text="« Loading »"></BigLoader>
 	</div>
 </template>
 

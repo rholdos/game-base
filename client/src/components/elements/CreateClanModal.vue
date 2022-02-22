@@ -1,4 +1,3 @@
-
 <template>
 	<div class="create-clan-modal">
 		<b-modal size="xl" hide-footer id="createClanModal" title="Create a new clan ..." ref="createClanModal">

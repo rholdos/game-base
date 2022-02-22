@@ -1,4 +1,3 @@
-
 <template>
 	<div id="releases">
 		<div class="row my-5 justify-content-center" id="loader" style="display: none">

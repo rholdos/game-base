@@ -1,4 +1,3 @@
-
 <template>
 	<div id="login-page">
 		<div id="particles-js"></div>

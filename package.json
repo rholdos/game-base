@@ -1,8 +1,4 @@
 {
-  "name": "game-base",
-  "version": "1.0.0",
-	"author": "Roman Holdos <rholdos@outlook.sk>",
-  "private": true,
   "scripts": {
     "start": "concurrently 'cd server && adonis serve --dev' 'cd client && npm run serve'"
   }

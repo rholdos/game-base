@@ -1,4 +1,3 @@
-
 <template>
 	<div class="big-game-card" :style="{ backgroundImage: 'url(' + this.$props.game.cover + ')' }">
 		<div class="big-game-card-cover-after"></div>

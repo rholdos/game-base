@@ -1,107 +1,114 @@
-
 #navigation {
-	height: 7.5%;
-	padding: 1rem 0;
-	margin: 0 1rem 0 calc(300px + 1rem);
-	color: $text-color;
-	border-bottom: solid 1px $border-color;
+  height: 7.5%;
+  padding: 1rem 0;
+  margin: 0 1rem 0 calc(300px + 1rem);
+  color: $text-color;
+  border-bottom: solid 1px $border-color;
 
-	@media (max-width: $grid-lg) {
-		margin: 0 1rem 0 calc(75px + 1rem);
-	}
+  @media (max-width: $grid-lg) {
+    margin: 0 1rem 0 calc(75px + 1rem);
+  }
 
-	.view {
-		height: 100%;
-		font-weight: 300;
-		padding-top: 0.25rem;
-		@media (max-width: $grid-md) { border-right: solid 1px $border-color; }
-		.name {
-			height: 100%;
-			font-weight: 400;
-			margin-left: 2rem;
-			font-size: $font-size-lg;
-			@media (max-width: $grid-md) {
-				@include flex-center(row);
-				margin-left: 0;
-			}
-		}
-	}
+  .view {
+    height: 100%;
+    font-weight: 300;
+    padding-top: 0.25rem;
+    @media (max-width: $grid-md) {
+      border-right: solid 1px $border-color;
+    }
+    .name {
+      height: 100%;
+      font-weight: 400;
+      margin-left: 2rem;
+      font-size: $font-size-lg;
+      @media (max-width: $grid-md) {
+        @include flex-center(row);
+        margin-left: 0;
+      }
+    }
+  }
 
-	.search {
-		height: 100%;
-		padding: 0.25rem 0 0.175rem 0;
-		font-size: $font-size-md;
-		input {
-			background: transparent;
-			width: 100%;
-			border: none;
-			padding: 0.25rem 1rem 0 1rem;
-			border-bottom: solid 1px transparent;
-			transition: all 0.25s;
-			&::placeholder { color: $text-color; }
-			&:focus {
-				border-bottom: solid 1px $accent-color;
-				color: $white;
-				outline: none;
-			}
-		}
-	}
+  .search {
+    height: 100%;
+    padding: 0.25rem 0 0.175rem 0;
+    font-size: $font-size-md;
+    input {
+      background: transparent;
+      width: 100%;
+      border: none;
+      padding: 0.25rem 1rem 0 1rem;
+      border-bottom: solid 1px transparent;
+      transition: all 0.25s;
+      &::placeholder {
+        color: $text-color;
+      }
+      &:focus {
+        border-bottom: solid 1px $accent-color;
+        color: $white;
+        outline: none;
+      }
+    }
+  }
 
-	.icons {
-		line-height: 100%;
-		float: right;
-		padding-top: 0.25rem;
-		border-right: solid 1px $text-color;
-		.icon {
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			margin: 0 0.5rem;
-			background: $text-color;
-			transition: all 0.25s;
-			&:first-child { margin-left: 0; }
-			&:last-child { margin-right: 2rem; }
-			&:hover {
-				cursor: pointer;
-				background-color: $accent-color;
-			}
-			&.releases-icon {
-				mask-image: url('../icons/releases.svg');
-				-webkit-mask-image: url('../icons/releases.svg');
-			}
-			&.shop-icon {
-				mask-image: url('../icons/shop.svg');
-				-webkit-mask-image: url('../icons/shop.svg');
-				height: 29px;
-			}
-			&.logout-icon {
-				mask-image: url('../icons/logout.svg');
-				-webkit-mask-image: url('../icons/logout.svg');
-			}
-		}
-	}
+  .icons {
+    line-height: 100%;
+    float: right;
+    padding-top: 0.25rem;
+    border-right: solid 1px $text-color;
+    .icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 0 0.5rem;
+      background: $text-color;
+      transition: all 0.25s;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 2rem;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $accent-color;
+      }
+      &.releases-icon {
+        mask-image: url('../icons/releases.svg');
+        -webkit-mask-image: url('../icons/releases.svg');
+      }
+      &.shop-icon {
+        mask-image: url('../icons/shop.svg');
+        -webkit-mask-image: url('../icons/shop.svg');
+        height: 29px;
+      }
+      &.logout-icon {
+        mask-image: url('../icons/logout.svg');
+        -webkit-mask-image: url('../icons/logout.svg');
+      }
+    }
+  }
 
-	.user {
-		height: 100%;
-		@include flex-center(row);
-		transition: all 0.25s;
-		.icon {
-			display: inline-block;
-			min-width: 33px;
-			min-height: 33px;
-			vertical-align: middle;
-			border: none;
-			background: transparent center no-repeat;
-			transition: all 0.25s;
-		}
-		.name {
-			line-height: 30px;
-			padding-left: 1rem;
-			font-size: $font-size-lg;
-			&:hover {
-				cursor: pointer;
-				color: $accent-color;
-			}
-		}
-	}
+  .user {
+    height: 100%;
+    @include flex-center(row);
+    transition: all 0.25s;
+    .icon {
+      display: inline-block;
+      min-width: 33px;
+      min-height: 33px;
+      vertical-align: middle;
+      border: none;
+      background: transparent center no-repeat;
+      transition: all 0.25s;
+    }
+    .name {
+      line-height: 30px;
+      padding-left: 1rem;
+      font-size: $font-size-lg;
+      &:hover {
+        cursor: pointer;
+        color: $accent-color;
+      }
+    }
+  }
 }

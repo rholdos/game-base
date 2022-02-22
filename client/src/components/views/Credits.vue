@@ -1,4 +1,3 @@
-
 <template>
 	<div id="credits">
 		<div class="row h-100">

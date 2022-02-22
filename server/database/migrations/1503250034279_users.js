@@ -1,10 +1,9 @@
-
 'use strict';
 
 const Schema = use('Schema');
 
 class UsersSchema extends Schema {
-	up () {
+	up() {
 		this.create('users', (table) => {
 			table.increments();
 			table.string('email', 100).notNullable().unique();
@@ -23,7 +22,7 @@ class UsersSchema extends Schema {
 		})
 	}
 
-	down () {
+	down() {
 		this.drop('users');
 	}
 }

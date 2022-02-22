@@ -1,4 +1,3 @@
-
 <template>
 	<div id="dashboard">
 		<div class="row">

@@ -1,4 +1,3 @@
-
 <template>
 	<transition name="slide-in">
 		<div class="loader-small" v-show="loaded" :load="loaded = true">

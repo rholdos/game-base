@@ -1,35 +1,34 @@
-
 .modal-content {
-	background: $modals-background;
-	color: $text-color;
+  background: $modals-background;
+  color: $text-color;
 
-	.modal-header {
-		margin: 1rem 1.5rem 0 1.5rem;
-		color: $accent-color;
-		border-bottom: solid 1px $border-color;
+  .modal-header {
+    margin: 1rem 1.5rem 0 1.5rem;
+    color: $accent-color;
+    border-bottom: solid 1px $border-color;
 
-		button.close {
-			color: $white;
-			opacity: 0.75;
-		}
-	}
+    button.close {
+      color: $white;
+      opacity: 0.75;
+    }
+  }
 
-	.modal-body {
-		text-align: center;
-	}
+  .modal-body {
+    text-align: center;
+  }
 
-	.modal-footer {
-		margin: 0 1.5rem 1rem 1.5rem;
-		color: $accent-color;
-		border-top: solid 1px $border-color;
+  .modal-footer {
+    margin: 0 1.5rem 1rem 1.5rem;
+    color: $accent-color;
+    border-top: solid 1px $border-color;
 
-		.btn-primary {
-			@include button($accent-color);
-			margin-left: 10px;
-		}
+    .btn-primary {
+      @include button($accent-color);
+      margin-left: 10px;
+    }
 
-		.btn-secondary {
-			@include button($secondary-color);
-		}
-	}
+    .btn-secondary {
+      @include button($secondary-color);
+    }
+  }
 }

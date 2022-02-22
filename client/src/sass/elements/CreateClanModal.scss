@@ -1,84 +1,83 @@
-
 .create-clan-modal {
-	.modal-body {
-		.left {
-			border-right: solid 1px $border-color;
-			@media (max-width: $grid-md) {
-				border-right: none;
-				border-bottom: solid 1px $border-color;
-			}
+  .modal-body {
+    .left {
+      border-right: solid 1px $border-color;
+      @media (max-width: $grid-md) {
+        border-right: none;
+        border-bottom: solid 1px $border-color;
+      }
 
-			.new-clan-name-input {
-				padding: 1rem 0;
-				border-bottom: solid 1px $border-color;
-			}
+      .new-clan-name-input {
+        padding: 1rem 0;
+        border-bottom: solid 1px $border-color;
+      }
 
-			.new-clan-members {
-				height: 0;
-				overflow: hidden;
+      .new-clan-members {
+        height: 0;
+        overflow: hidden;
 
-				&-row {
-					margin-top: 1rem;
-					margin-bottom: 1rem;
-				}
-			}
+        &-row {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
 
-			.new-clan-icon {
-				margin-top: -1px;
-				padding: 1rem 0;
+      .new-clan-icon {
+        margin-top: -1px;
+        padding: 1rem 0;
 
-				.icons-gallery {
-					overflow: hidden;
-					margin-bottom: 1rem;
+        .icons-gallery {
+          overflow: hidden;
+          margin-bottom: 1rem;
 
-					img {
-						width: 50px;
-						height: 50px;
-						margin: 10px 20px;
-						filter: brightness(75%);
-						cursor: pointer;
-						border-radius: 50%;
-						transition: all 0.25s;
-						&:hover {
-							filter: brightness(100%);
-							transform: scale(1.45);
-						}
-					}
-				}
-			}
-		}
+          img {
+            width: 50px;
+            height: 50px;
+            margin: 10px 20px;
+            filter: brightness(75%);
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.25s;
+            &:hover {
+              filter: brightness(100%);
+              transform: scale(1.45);
+            }
+          }
+        }
+      }
+    }
 
-		.right {
-			@include flex-center(column);
-			.clan-label {
-				margin: 1.5rem 0 0 0;
-			}
-			.clan-name {
-				width: 100%;
-				margin-bottom: 1.75rem;
-				min-height: 48px;
-				height: auto;
-				color: $accent-color;
-			}
-			.big-clan-icon {
-				width: 175px;
-				height: 175px;
-				border-radius: 50%;
-				margin-bottom: 2.5rem;
-			}
-			.clan-leader {
-				padding: 0 1.25rem 0.25rem 1.25rem;
-				border-bottom: solid 1px $border-color;
-				color: $accent-color;
-			}
-			.clan-members-label {
-				text-transform: uppercase;
-			}
-			.clan-members-list {
-				width: 100%;
-				margin-bottom: 2rem;
-				text-transform: u;
-			}
-		}
-	}
+    .right {
+      @include flex-center(column);
+      .clan-label {
+        margin: 1.5rem 0 0 0;
+      }
+      .clan-name {
+        width: 100%;
+        margin-bottom: 1.75rem;
+        min-height: 48px;
+        height: auto;
+        color: $accent-color;
+      }
+      .big-clan-icon {
+        width: 175px;
+        height: 175px;
+        border-radius: 50%;
+        margin-bottom: 2.5rem;
+      }
+      .clan-leader {
+        padding: 0 1.25rem 0.25rem 1.25rem;
+        border-bottom: solid 1px $border-color;
+        color: $accent-color;
+      }
+      .clan-members-label {
+        text-transform: uppercase;
+      }
+      .clan-members-list {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-transform: u;
+      }
+    }
+  }
 }

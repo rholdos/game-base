@@ -1,4 +1,3 @@
-
 <template>
 	<div class="icon-text-modal">
 		<b-modal :id="$props.modalId" :title="$props.title">

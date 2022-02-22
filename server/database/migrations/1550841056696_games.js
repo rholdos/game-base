@@ -1,10 +1,9 @@
-
 'use strict';
 
 const Schema = use('Schema');
 
 class GamesSchema extends Schema {
-  up () {
+  up() {
     this.create('games', (table) => {
       table.increments();
       table.integer('user_id').unsigned().references('id').inTable('users');
@@ -15,7 +14,7 @@ class GamesSchema extends Schema {
     })
   }
 
-  down () {
+  down() {
     this.drop('games');
   }
 }

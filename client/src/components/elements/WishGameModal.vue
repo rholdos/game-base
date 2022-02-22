@@ -1,4 +1,3 @@
-
 <template>
 	<div class="wish-game-modal buy-game-modal">
 		<b-modal hide-footer id="wishGameModal" title="Wish this game ..." ref="wishGameModal">

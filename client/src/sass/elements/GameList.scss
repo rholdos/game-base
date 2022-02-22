@@ -1,184 +1,277 @@
-
 .game-list {
-	$selector: #{&};
-	display: flex;
-	flex-direction: column;
-	height: 85vh;
-	background: $cards-background;
-	background-size: cover;
-	margin: 0.5rem 0;
-	padding: 0 1rem;
-	cursor: default;
-	@include box-shadow-component($cards-shadow-color);
+  $selector: #{&};
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  background: $cards-background;
+  background-size: cover;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  cursor: default;
+  @include box-shadow-component($cards-shadow-color);
 
-	&-heading {
-		padding: 2rem 0.5rem 1rem 0.5rem;
-		text-align: center;
-		*:last-child { margin-bottom: 0; }
-	}
+  &-heading {
+    padding: 2rem 0.5rem 1rem 0.5rem;
+    text-align: center;
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-	&-heading-border {
-		display: block;
-		height: 1px;
-	}
+  &-heading-border {
+    display: block;
+    height: 1px;
+  }
 
-	&-body {
-		height: 100%;
-		overflow-x: hidden;
-		overflow-y: auto;
-		color: $text-color;
-		padding: 0 0.5rem;
-		margin-top: -1px;
-		*:last-child { margin-bottom: 0; }
+  &-body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: $text-color;
+    padding: 0 0.5rem;
+    margin-top: -1px;
+    *:last-child {
+      margin-bottom: 0;
+    }
 
-		.no-games {
-			@include flex-center(column);
-			height: 100%;
+    .no-games {
+      @include flex-center(column);
+      height: 100%;
 
-			img {
-				width: 100px;
-				height: 100px;
-				margin-bottom: 1rem;
-			}
-		}
+      img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+      }
+    }
 
-		&-item {
-			@include flex-center(row);
-			@include button-reset();
-			width: 100%;
-			justify-content: space-between;
-			padding: 1rem;
-			border-top: solid 1px $border-color;
-			border-bottom: solid 1px $border-color;
-			cursor: pointer;
-			transition: all 0.3s ease-out;
-			&:not(:nth-child(odd)) {
-				text-align: right;
-			}
+    &-item {
+      @include flex-center(row);
+      @include button-reset();
+      width: 100%;
+      justify-content: space-between;
+      padding: 1rem;
+      border-top: solid 1px $border-color;
+      border-bottom: solid 1px $border-color;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+      &:not(:nth-child(odd)) {
+        text-align: right;
+      }
 
-			&:nth-child(odd)  { .before  { display: none; } }
-			&:nth-child(even) { .after   { display: none; } }
+      &:nth-child(odd) {
+        .before {
+          display: none;
+        }
+      }
+      &:nth-child(even) {
+        .after {
+          display: none;
+        }
+      }
 
-			&-text {
-				.title {
-					font-family: $font-family-thin;
-					font-size: $font-size-lg;
-					margin-bottom: 0.25rem;
-					transition: all 0.3s ease-out;
-				}
+      &-text {
+        .title {
+          font-family: $font-family-thin;
+          font-size: $font-size-lg;
+          margin-bottom: 0.25rem;
+          transition: all 0.3s ease-out;
+        }
 
-				.date {
-					font-family: $font-family-secondary;
-					font-size: $font-size-sm;
-					color: $text-color-darker;
-					transition: all 0.3s ease-out;
-				}
-			}
+        .date {
+          font-family: $font-family-secondary;
+          font-size: $font-size-sm;
+          color: $text-color-darker;
+          transition: all 0.3s ease-out;
+        }
+      }
 
-			&-icon {
-				@include flex-center(column);
-				transition: all 0.3s ease-out;
-				z-index: 1;
-				&.before { margin-left: -70px; }
-				&.after  { margin-right: -70px; }
-				img {
-					width: 35px;
-					height: 35px;
-				}
-			}
+      &-icon {
+        @include flex-center(column);
+        transition: all 0.3s ease-out;
+        z-index: 1;
+        &.before {
+          margin-left: -70px;
+        }
+        &.after {
+          margin-right: -70px;
+        }
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
 
-			&:hover {
-				transition: all 0.3s ease-out;
-				.before { margin-left: 0; }
-				.after  { margin-right: 0; }
-			}
-		}
-	}
+      &:hover {
+        transition: all 0.3s ease-out;
+        .before {
+          margin-left: 0;
+        }
+        .after {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 
-	&-footing {
-		position: sticky;
-		bottom: 0;
-		text-align: right;
-		margin-top: auto;
-		border-top: solid 1px $border-color;
-		padding: 1rem 0.5rem;
-		*:last-child { margin-bottom: 0; }
-	}
+  &-footing {
+    position: sticky;
+    bottom: 0;
+    text-align: right;
+    margin-top: auto;
+    border-top: solid 1px $border-color;
+    padding: 1rem 0.5rem;
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-	// Color variants
-	&.blue {
-		#{$selector}-heading { color: $blue; }
-		#{$selector}-heading-border { @include bg-gradient($blue); }
-		#{$selector}-body-item {
-			&:hover {
-				border-top: solid 1px $blue;
-				border-bottom: solid 1px $blue;
-				#{$selector}-body-item-text { .title { color: $blue; } }
-				#{$selector}-body-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $blue; } }
-		}
-		#{$selector}-footing { color: $blue; }
-		#{$selector}-footing-button {
-			@include bg-gradient($blue);
-			@include box-shadow-under($blue);
-		}
-	}
+  // Color variants
+  &.blue {
+    #{$selector}-heading {
+      color: $blue;
+    }
+    #{$selector}-heading-border {
+      @include bg-gradient($blue);
+    }
+    #{$selector}-body-item {
+      &:hover {
+        border-top: solid 1px $blue;
+        border-bottom: solid 1px $blue;
+        #{$selector}-body-item-text {
+          .title {
+            color: $blue;
+          }
+        }
+        #{$selector}-body-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $blue;
+        }
+      }
+    }
+    #{$selector}-footing {
+      color: $blue;
+    }
+    #{$selector}-footing-button {
+      @include bg-gradient($blue);
+      @include box-shadow-under($blue);
+    }
+  }
 
-	&.red {
-		#{$selector}-heading { color: $red; }
-		#{$selector}-heading-border { @include bg-gradient($red); }
-		#{$selector}-body-item {
-			&:hover {
-				border-top: solid 1px $red;
-				border-bottom: solid 1px $red;
-				#{$selector}-body-item-text { .title { color: $red; } }
-				#{$selector}-body-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $red; } }
-		}
-		#{$selector}-footing { color: $red; }
-		#{$selector}-footing-button {
-			@include bg-gradient($red);
-			@include box-shadow-under($red);
-		}
-	}
+  &.red {
+    #{$selector}-heading {
+      color: $red;
+    }
+    #{$selector}-heading-border {
+      @include bg-gradient($red);
+    }
+    #{$selector}-body-item {
+      &:hover {
+        border-top: solid 1px $red;
+        border-bottom: solid 1px $red;
+        #{$selector}-body-item-text {
+          .title {
+            color: $red;
+          }
+        }
+        #{$selector}-body-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $red;
+        }
+      }
+    }
+    #{$selector}-footing {
+      color: $red;
+    }
+    #{$selector}-footing-button {
+      @include bg-gradient($red);
+      @include box-shadow-under($red);
+    }
+  }
 
-	&.green {
-		#{$selector}-heading { color: $green; }
-		#{$selector}-heading-border { @include bg-gradient($green); }
-		#{$selector}-body-item {
-			&:hover {
-				border-top: solid 1px $green;
-				border-bottom: solid 1px $green;
-				#{$selector}-body-item-text { .title { color: $green; } }
-				#{$selector}-body-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $green; } }
-		}
-		#{$selector}-footing { color: $green; }
-		#{$selector}-footing-button {
-			@include bg-gradient($green);
-			@include box-shadow-under($green);
-		}
-	}
+  &.green {
+    #{$selector}-heading {
+      color: $green;
+    }
+    #{$selector}-heading-border {
+      @include bg-gradient($green);
+    }
+    #{$selector}-body-item {
+      &:hover {
+        border-top: solid 1px $green;
+        border-bottom: solid 1px $green;
+        #{$selector}-body-item-text {
+          .title {
+            color: $green;
+          }
+        }
+        #{$selector}-body-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $green;
+        }
+      }
+    }
+    #{$selector}-footing {
+      color: $green;
+    }
+    #{$selector}-footing-button {
+      @include bg-gradient($green);
+      @include box-shadow-under($green);
+    }
+  }
 
-	&.orange {
-		#{$selector}-heading { color: $orange; }
-		#{$selector}-heading-border { @include bg-gradient($orange); }
-		#{$selector}-body-item {
-			&:hover {
-				border-top: solid 1px $orange;
-				border-bottom: solid 1px $orange;
-				#{$selector}-body-item-text { .title { color: $orange; } }
-				#{$selector}-body-item-text { .date  { color: $text-color; } }
-			}
-			&-icon { p { color: $orange; } }
-		}
-		#{$selector}-footing { color: $orange; }
-		#{$selector}-footing-button {
-			@include bg-gradient($orange);
-			@include box-shadow-under($orange);
-		}
-	}
+  &.orange {
+    #{$selector}-heading {
+      color: $orange;
+    }
+    #{$selector}-heading-border {
+      @include bg-gradient($orange);
+    }
+    #{$selector}-body-item {
+      &:hover {
+        border-top: solid 1px $orange;
+        border-bottom: solid 1px $orange;
+        #{$selector}-body-item-text {
+          .title {
+            color: $orange;
+          }
+        }
+        #{$selector}-body-item-text {
+          .date {
+            color: $text-color;
+          }
+        }
+      }
+      &-icon {
+        p {
+          color: $orange;
+        }
+      }
+    }
+    #{$selector}-footing {
+      color: $orange;
+    }
+    #{$selector}-footing-button {
+      @include bg-gradient($orange);
+      @include box-shadow-under($orange);
+    }
+  }
 }

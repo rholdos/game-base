@@ -1,4 +1,3 @@
-
 <template>
 	<div id="main-bar">
 		<router-view></router-view>

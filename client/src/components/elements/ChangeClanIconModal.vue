@@ -1,4 +1,3 @@
-
 <template>
 	<div class="change-clan-icon-modal">
 		<b-modal size="xl" hide-footer :id="$props.modalId" title="Change clan icon ..." ref="changeClanIconModal">

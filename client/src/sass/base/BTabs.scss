@@ -1,67 +1,65 @@
-
 .b-tabs {
-	.nav-tabs {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		border-bottom: solid 1px $border-color;
+  .nav-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: solid 1px $border-color;
 
-		.nav-link {
-			color: $text-color;
-			font-size: $font-size-md !important;
-			padding: 0.75rem 3rem;
-			border: solid 1px transparent;
-			transition: all 0.2s;
+    .nav-link {
+      color: $text-color;
+      font-size: $font-size-md !important;
+      padding: 0.75rem 3rem;
+      border: solid 1px transparent;
+      transition: all 0.2s;
 
-			@media (max-width: 500px) {
-				font-size: $font-size-sm !important;
-				padding: 0.5rem 1rem;
-			}
+      @media (max-width: 500px) {
+        font-size: $font-size-sm !important;
+        padding: 0.5rem 1rem;
+      }
 
-			&:hover {
-				border: solid 1px transparent;
-				transition: all 0.2s;
-			}
+      &:hover {
+        border: solid 1px transparent;
+        transition: all 0.2s;
+      }
 
-			&.active {
-				background: transparent;
-				color: $accent-color;
-				border: solid 1px $border-color;
-				border-bottom: solid 1px transparent;
-				transition: all 0.2s;
-				position: relative;
+      &.active {
+        background: transparent;
+        color: $accent-color;
+        border: solid 1px $border-color;
+        border-bottom: solid 1px transparent;
+        transition: all 0.2s;
+        position: relative;
 
-				&:after, &:before {
-					top: calc(100% + 1px);
-					left: 50%;
-					border: solid transparent;
-					content: '';
-					height: 0;
-					width: 0;
-					position: absolute;
-					pointer-events: none;
-				}
+        &:after,
+        &:before {
+          top: calc(100% + 1px);
+          left: 50%;
+          border: solid transparent;
+          content: '';
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+        }
 
-				&:after {
-					border-top-color: $border-color;
-					border-width: 8px;
-					margin-left: -8px;
-				}
+        &:after {
+          border-top-color: $border-color;
+          border-width: 8px;
+          margin-left: -8px;
+        }
 
-				&:before {
-					border-top-color: $border-color;
-					border-width: 10px;
-					margin-left: -10px;
-				}
+        &:before {
+          border-top-color: $border-color;
+          border-width: 10px;
+          margin-left: -10px;
+        }
+      }
+    }
+  }
 
-			}
-		}
-	}
-
-	.tab-content {
-		.tab-pane{
-			outline: none;
-		}
-	}
+  .tab-content {
+    .tab-pane {
+      outline: none;
+    }
+  }
 }
-

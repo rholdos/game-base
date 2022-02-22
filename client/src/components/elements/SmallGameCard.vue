@@ -1,4 +1,3 @@
-
 <template>
 	<transition name="fly-from-top">
 		<div class="col-sm-6 col-xl-4 col-hd-3" v-show="loaded" :load="loaded = true">

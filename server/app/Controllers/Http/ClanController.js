@@ -1,4 +1,3 @@
-
 'use strict';
 
 const Clan = use('App/Models/Clan');
@@ -12,16 +11,11 @@ class ClanController {
 	async insert({ auth, request }) {
 		let { name, icon } = request.all();
 		let leader = await auth.getUser();
-		let clan = await Clan.create({
-			name,
-			icon
-		});
+		let clan = await Clan.create({ name, icon });
 		let now = new Date();
 		let date = now.toDateString().slice(4);
 		await Database.table('users').where('id', leader.id).update({ clan_id: clan.id, clan_join_date: date });
-		await clan.merge({
-			leader: leader.id
-		})
+		await clan.merge({ leader: leader.id })
 		await clan.save();
 		return clan.id;
 	}
@@ -40,7 +34,12 @@ class ClanController {
 			if (new_member.clan_invitation) { return 'member_has_invitation'; }
 			let now = new Date();
 			let date = now.toDateString().slice(4);
-			if (new_member) { await Database.table('users').where('id', new_member.id).update({ clan_invitation: clan.id, clan_invitation_date: date }); }
+			if (new_member) {
+				await Database
+					.table('users')
+					.where('id', new_member.id)
+					.update({ clan_invitation: clan.id, clan_invitation_date: date });
+			}
 			if (!clan.member_2) {
 				clan.member_2 = new_member.id;
 			} else if (!clan.member_3) {

@@ -1,4 +1,3 @@
-
 <template>
 	<div id="profile">
 		<div class="row h-100">

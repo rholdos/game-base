@@ -1,16 +1,15 @@
-
 .image-flip-animation {
-	animation: image-flip 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: image-flip 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 @keyframes image-flip {
-	0% {
-		transform: rotateY(0deg);
-	}
-	50% {
-		opacity: 0.25;
-	}
-	100% {
-		transform: rotateY(360deg);
-	}
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }

@@ -1,4 +1,3 @@
-
 <template>
 	<div class="row wish-list">
 		<div class="col-lg-6 wish-list-left">

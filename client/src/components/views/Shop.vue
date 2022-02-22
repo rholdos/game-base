@@ -1,4 +1,3 @@
-
 <template>
 	<div id="shop">
 		<b-tabs class="b-tabs mt-3">

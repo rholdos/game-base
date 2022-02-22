@@ -1,13 +1,12 @@
-
 #main-bar {
-	height: 92.5%;
-	margin: 0 1rem 0 calc(300px + 1rem);
-	padding: 1rem;
+  height: 92.5%;
+  margin: 0 1rem 0 calc(300px + 1rem);
+  padding: 1rem;
   overflow-x: hidden;
-	overflow-y: auto;
+  overflow-y: auto;
   color: $text-color !important;
 
   @media (max-width: $grid-lg) {
-		margin: 0 1rem 0 calc(75px + 1rem);
+    margin: 0 1rem 0 calc(75px + 1rem);
   }
 }

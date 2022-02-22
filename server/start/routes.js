@@ -1,4 +1,3 @@
-
 'use strict';
 
 const Route = use('Route');
@@ -6,11 +5,11 @@ const Database = use('Database');
 
 // Default routes
 Route.get('/', () => {
-  return { greeting: '- This is Adonis JS Server for GameBase App -' };
+  return { greeting: '- Adonis JS Server for GameBase App -' };
 });
 
-// Server API Routes
-Route.group( () => {
+// Server API routes
+Route.group(() => {
   Route.post('register', 'UserController.register');
   Route.post('login', 'UserController.login');
 	Route.get('users', 'UserController.selectLogged');
@@ -29,10 +28,3 @@ Route.group( () => {
 	Route.post('wishes', 'WishController.insert').middleware('auth');
 	Route.delete('wishes/:id', 'WishController.delete').middleware('auth');
 }).prefix('server');
-
-
-// Testing routes --------------------------------------------------------------------------
-// Route.get('/users', async () => { return await Database.table('users').select('*'); });
-// Route.get('/clans', async () => { return await Database.table('clans').select('*'); });
-// Route.get('/games', async () => { return await Database.table('games').select('*'); });
-// Route.get('/wishes', async () => { return await Database.table('wishes').select('*'); });

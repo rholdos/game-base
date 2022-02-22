@@ -1,13 +1,12 @@
-
 #login-page {
   overflow: hidden;
 
-	#particles-js {
-		overflow: hidden;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background: $login-page-background center no-repeat;
-		background-size: cover;
-	}
+  #particles-js {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $login-page-background center no-repeat;
+    background-size: cover;
+  }
 }

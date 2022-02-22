@@ -1,6 +1,5 @@
-
 body {
-	background: $loading-page-background;
+  background: $loading-page-background;
   box-sizing: border-box;
   font-family: $font-family-primary;
   -webkit-font-smoothing: antialiased;
@@ -24,14 +23,28 @@ body {
   min-height: 100vh;
 }
 
-hr { border-top: solid 1px $border-color; }
+hr {
+  border-top: solid 1px $border-color;
+}
 
-.button             { @include button($accent-color); }
-.button-secondary   { @include button($secondary-color); }
-.button-blue        { @include button($blue); }
-.button-green       { @include button($green); }
-.button-red         { @include button($red); }
-.button-orange      { @include button($orange); }
+.button {
+  @include button($accent-color);
+}
+.button-secondary {
+  @include button($secondary-color);
+}
+.button-blue {
+  @include button($blue);
+}
+.button-green {
+  @include button($green);
+}
+.button-red {
+  @include button($red);
+}
+.button-orange {
+  @include button($orange);
+}
 
 .button-small {
   padding: 2px 30px;
@@ -45,24 +58,24 @@ hr { border-top: solid 1px $border-color; }
 }
 
 .invalid-input {
-	border: solid 1px $red !important;
-	color: $red !important;
+  border: solid 1px $red !important;
+  color: $red !important;
 }
 
 .valid-input {
-	border: solid 1px $green !important;
-	color: $green !important;
+  border: solid 1px $green !important;
+  color: $green !important;
 }
 
 .alert {
-	margin: 1rem;
-	text-align: center;
+  margin: 1rem;
+  text-align: center;
 }
 
 .grab {
-	cursor: grab;
+  cursor: grab;
 }
 
 .grabbing {
-	cursor: grabbing;
+  cursor: grabbing;
 }

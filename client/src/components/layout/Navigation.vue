@@ -1,4 +1,3 @@
-
 <template>
 	<div id="navigation">
 		<div class="row">

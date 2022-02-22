@@ -1,4 +1,3 @@
-
 'use strict';
 
 const Game = use('App/Models/Game');

@@ -1,4 +1,3 @@
-
 <template>
 	<div class="invite-clan-member-modal">
 		<b-modal ref="inviteClanMemberModal" title="Invite new clan member ..." hide-footer>

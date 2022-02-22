@@ -1,4 +1,3 @@
-
 #shop {
   .h-45px {
     height: 45px;
@@ -13,35 +12,36 @@
     }
   }
 
-	.hr-with-arrow-down {
-		position: relative;
-		width: 90%;
-		margin: 0 auto;
-		border-bottom: solid 1px $border-color;
+  .hr-with-arrow-down {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: solid 1px $border-color;
 
-		&:after, &:before {
-			top: 100%;
-			left: 50%;
-			border: solid transparent;
-			content: '';
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-		}
+    &:after,
+    &:before {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: '';
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
 
-		&:after {
-			border-top-color: $border-color;
-			border-width: 8px;
-			margin-left: -8px;
-		}
+    &:after {
+      border-top-color: $border-color;
+      border-width: 8px;
+      margin-left: -8px;
+    }
 
-		&:before {
-			border-top-color: $border-color;
-			border-width: 10px;
-			margin-left: -10px;
-		}
-	}
+    &:before {
+      border-top-color: $border-color;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+  }
 
   .no-result-icon {
     width: 100%;

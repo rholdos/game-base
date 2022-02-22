@@ -1,4 +1,3 @@
-
 <template>
 	<div class="page-center-container">
 		<form id="login-form">

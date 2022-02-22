@@ -1,10 +1,9 @@
-
 // Inputs ------------------------------
 .input-group {
   &-prepend {
     .input-group-text {
-			position: relative;
-			left: -1px;
+      position: relative;
+      left: -1px;
       background: $inputs-background;
       color: $text-color;
       border: none;
@@ -16,26 +15,27 @@
     }
   }
 
-	input, select {
-		background: $inputs-background;
-		color: $text-color;
-		border: solid 1px transparent;
-		&:focus {
-			background: $inputs-background;
-			color: $text-color;
-			outline: none;
-			border-color: transparent;
-			box-shadow: none !important;
-			-webkit-box-shadow: none !important;
-		}
-	}
+  input,
+  select {
+    background: $inputs-background;
+    color: $text-color;
+    border: solid 1px transparent;
+    &:focus {
+      background: $inputs-background;
+      color: $text-color;
+      outline: none;
+      border-color: transparent;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
+  }
 }
 
 label {
-	width: 100%;
-	margin:  0 0 0.25rem 0;
-	text-align: center;
-	font-size: $font-size-md;
+  width: 100%;
+  margin: 0 0 0.25rem 0;
+  text-align: center;
+  font-size: $font-size-md;
 }
 
 input:disabled,
@@ -73,7 +73,7 @@ select:disabled {
       position: absolute;
       width: 13px;
       height: 13px;
-      top : 1.5px;
+      top: 1.5px;
       left: -20px;
       border-radius: 50%;
       border: solid 1px $text-color;
@@ -84,36 +84,36 @@ select:disabled {
       display: block;
       position: absolute;
       font-size: 1.25rem;
-      top : -9px;
+      top: -9px;
       left: -19px;
       opacity: 0;
       transition: all 0.25s;
-			color: $accent-color;
+      color: $accent-color;
     }
   }
 }
 
 // Range Inputs ------------------------------
-input[type=range] {
+input[type='range'] {
   -webkit-appearance: none;
-	background: transparent;
+  background: transparent;
   width: 100%;
   margin: 5px 0;
 }
-input[type=range]:focus {
+input[type='range']:focus {
   outline: none;
 }
-input[type=range]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
   height: 12px;
   cursor: pointer;
-	background: $inputs-background;
+  background: $inputs-background;
   border-radius: 50px;
 }
-input[type=range]:focus::-webkit-slider-runnable-track {
-	background: $inputs-background;
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: $inputs-background;
 }
-input[type=range]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   box-shadow: 0 1px 10px $accent-color;
   border: 0 solid $accent-color;
   height: 20px;
@@ -124,51 +124,51 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -4.5px;
 }
-input[type=range]::-moz-range-track {
-	width: 100%;
-	height: 12px;
-	cursor: pointer;
-	background: $inputs-background;
-	border-radius: 50px;
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: $inputs-background;
+  border-radius: 50px;
 }
-input[type=range]::-moz-range-thumb {
-	box-shadow: 0 1px 10px $accent-color;
-	border: 0 solid $accent-color;
-	height: 20px;
-	width: 20px;
-	border-radius: 50px;
-	background: $accent-color;
-	cursor: pointer;
-	-webkit-appearance: none;
-	margin-top: -4.5px;
+input[type='range']::-moz-range-thumb {
+  box-shadow: 0 1px 10px $accent-color;
+  border: 0 solid $accent-color;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: $accent-color;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.5px;
 }
-input[type=range]::-ms-track {
-	width: 100%;
-	height: 12px;
-	cursor: pointer;
-	background: $inputs-background;
-	border-radius: 50px;
+input[type='range']::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  background: $inputs-background;
+  border-radius: 50px;
 }
-input[type=range]::-ms-thumb {
-	box-shadow: 0 1px 10px $accent-color;
-	border: 0 solid $accent-color;
-	height: 20px;
-	width: 20px;
-	border-radius: 50px;
-	background: $accent-color;
-	cursor: pointer;
-	-webkit-appearance: none;
-	margin-top: -4.5px;
+input[type='range']::-ms-thumb {
+  box-shadow: 0 1px 10px $accent-color;
+  border: 0 solid $accent-color;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: $accent-color;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.5px;
 }
-input[type=range]::-ms-fill-lower {
-	background: $accent-color;
+input[type='range']::-ms-fill-lower {
+  background: $accent-color;
 }
-input[type=range]::-ms-fill-upper {
-	background: $accent-color;
+input[type='range']::-ms-fill-upper {
+  background: $accent-color;
 }
-input[type=range]:focus::-ms-fill-lower {
-	background: $accent-color;
+input[type='range']:focus::-ms-fill-lower {
+  background: $accent-color;
 }
-input[type=range]:focus::-ms-fill-upper {
-	background: $accent-color;
+input[type='range']:focus::-ms-fill-upper {
+  background: $accent-color;
 }

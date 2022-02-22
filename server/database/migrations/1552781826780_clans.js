@@ -1,10 +1,9 @@
-
 'use strict';
 
 const Schema = use('Schema');
 
 class ClansSchema extends Schema {
-  up () {
+  up() {
     this.create('clans', (table) => {
       table.increments()
 			table.string('name', 50).notNullable().unique();
@@ -20,7 +19,7 @@ class ClansSchema extends Schema {
     })
   }
 
-  down () {
+  down() {
     this.drop('clans');
   }
 }

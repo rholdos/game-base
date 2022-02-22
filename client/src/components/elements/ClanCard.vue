@@ -1,4 +1,3 @@
-
 <template>
 	<div class="clan-card">
 		<div class="clan-card-icon">

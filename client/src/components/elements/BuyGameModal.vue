@@ -1,4 +1,3 @@
-
 <template>
 	<div class="buy-game-modal">
 		<b-modal hide-footer id="buyGameModal" title="Buy this game ..." ref="buyGameModal">

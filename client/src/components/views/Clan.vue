@@ -1,4 +1,3 @@
-
 <template>
 	<div id="clan">
 		<div class="no-clan" v-if="!clan && !clan_invitation">

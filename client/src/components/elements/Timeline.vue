@@ -1,4 +1,3 @@
-
 <template>
 	<div class="timeline">
 		<div class="timeline-title" v-if="$props.title">{{ $props.title }}</div>

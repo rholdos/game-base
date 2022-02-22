@@ -1,4 +1,3 @@
-
 @mixin flex-center($direction) {
   display: flex;
   flex-direction: $direction;
@@ -17,9 +16,8 @@
 }
 
 @mixin box-shadow-under($color) {
-  box-shadow: 0 10px 30px -10px rgba($color, 0.35),
-              0 5px  20px -5px  rgba($color, 0.25),
-              0 10px 30px -20px rgba($black, 0.15);
+  box-shadow: 0 10px 30px -10px rgba($color, 0.35), 0 5px 20px -5px rgba($color, 0.25),
+    0 10px 30px -20px rgba($black, 0.15);
 }
 
 @mixin box-shadow-component($color) {
@@ -35,12 +33,12 @@
 }
 
 @mixin button-reset() {
-	background: none;
-	border: none;
-	color: unset;
-	outline: none !important;
-	text-align: unset;
-	padding: 0;
+  background: none;
+  border: none;
+  color: unset;
+  outline: none !important;
+  text-align: unset;
+  padding: 0;
 }
 
 @mixin button($bg-color) {
@@ -57,7 +55,7 @@
   color: $black;
   @include bg-gradient($bg-color);
   box-shadow: 0 5px 10px rgba($bg-color, 0.25);
-	outline: none !important;
+  outline: none !important;
 
   &:hover {
     color: $white;

@@ -1,4 +1,3 @@
-
 <template>
 	<div class="game-list">
 		<div class="game-list-heading">

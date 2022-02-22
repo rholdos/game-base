@@ -1,9 +1,8 @@
-
 <template>
 	<div id="main-page" v-if="this.$store.getters.isLoggedIn">
 		<div class="wrapper">
 			<side-bar></side-bar>
-			<Navigation/>
+			<Navigation />
 			<main-bar></main-bar>
 		</div>
 	</div>

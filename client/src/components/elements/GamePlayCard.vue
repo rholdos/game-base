@@ -1,4 +1,3 @@
-
 <template>
 	<div class="game-play-card">
 		<div class="game-play-card-icon">

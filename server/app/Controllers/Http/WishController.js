@@ -1,4 +1,3 @@
-
 'use strict';
 
 const Wish = use('App/Models/Wish');
@@ -16,11 +15,7 @@ class WishController {
 		let wish = new Wish();
 		let now = new Date();
 		let wish_date = now.toDateString().slice(4);
-		wish.fill({
-			wish_id,
-			title,
-			wish_date
-		});
+		wish.fill({ wish_id, title, wish_date });
 		await user.wishes().save(wish);
 		return wish;
 	}
