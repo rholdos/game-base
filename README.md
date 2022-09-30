@@ -1,5 +1,4 @@
 ### GameBase
-- I've created this project together with my Bachelor’s thesis, back in 2019.
 
 ### Description
 - Simple SPA, uses [IGDB](https://www.igdb.com/)'s (video game database) REST API to fetch data, process them and show them to logged in users via interactive UI.
